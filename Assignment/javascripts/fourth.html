@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<p>Click here to calculate</p>
+<button type="button" onclick="myfunction()">click here!</button>
+
+<p>
+Firstnumber:<input type="number" id="one"/>
+</p>
+<p>
+Secondnumber:<input type="number" id="two"/>
+</p>
+
+
+<h1 id="demo">
+</h1>
+
+<script>
+function myfunction(){
+
+   
+   var x=document.getElementById("one").value;
+   var y=document.getElementById("two").value;
+   var z=+x + +y;
+   document.getElementById("demo").innerHTML=z;
+}
+</script>
+</body>
+</html> 

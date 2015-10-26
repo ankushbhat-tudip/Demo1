@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<script>
+function validation()
+{
+var a = document.form.name.value;
+if(a=="")
+{
+alert("Please Enter Your Name");
+document.form.name.focus();
+return false;
+}
+if(!isNaN(a))
+{
+alert("Please Enter Only Characters");
+document.form.name.select();
+return false;
+}
+if ((a.length < 5) || (a.length > 15))
+{
+alert("Your Character must be 5 to 15 Character");
+document.form.name.select();
+return false;
+}
+var b=document.form.phone.value;
+var phone no=/^\d{10}$/; 
+if(b==phone no)
+{
+   alert("correct phone no:");
+   return true;
+}
+else
+{
+  alert("please enter correct phone number:");
+  return false;
+}
+
+}
+</script>
+
+
+
+
+
+
+<form name="form" onsubmit="return validation()" action=
+"menu.html">
+<div>
+<p>
+username:<input type="text" id="p1" name="uname"/>
+</p>
+<p>
+Phoneno:<input type="text" id="p2" name="phone"/>
+</p>
+<p>
+<input type="submit" value="submit"/>
+
+</p>
+</form>
+
+</body>
+</html>
